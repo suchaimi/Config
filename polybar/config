@@ -1,0 +1,166 @@
+/* Polybar Config */
+
+[colors]
+background = ${xrdb:color0:#222}
+background-alt = ${xrdb:color0:#444}
+foreground = ${xrdb:color7:#222}
+border = ${xrdb:color4:#222}
+foreground-alt = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
+
+[bar/polybar]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 1904px
+height = 30px
+offset-x = 0.4%
+offset-y = 0.8%
+fixed-center = false
+override-redirect = true
+wm-restack = i3
+background = ${colors.background}
+foreground = ${colors.foreground}
+border-size = 3
+border-color = ${colors.border}
+padding-left = 0
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+font-0 = FuraCode Nerd Font:size=12;3
+modules-left = manjaro i3
+modules-right = cpu network volume xbacklight date battery powermenu
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/manjaro]
+type = custom/text
+content = 
+content-padding = 1
+content-foreground = ${colors.foreground}
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+label-mode-padding = 1
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+label-focused = %index%
+label-focused-background = ${colors.border}
+label-focused-foreground = ${colors.background}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 1
+label-unfocused = %index%
+label-unfocused-padding = 1
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+[module/xbacklight]
+type = internal/xbacklight
+format = <label>
+label = 盛 %percentage%%
+
+[module/date]
+type = internal/date
+interval = 1
+date = " %Y-%m-%d"
+date-alt = " %Y-%m-%d"
+time = %H:%M
+time-alt = %H:%M:%S
+format-prefix-foreground = ${colors.foreground-alt}
+label =  %time%
+
+[module/volume]
+type = internal/alsa
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+master-mixer = Master
+speaker-mixer = Speaker
+headphone-mixer = Headphone
+headphone-id = 9
+mapped = true
+format-volume = <label-volume>
+label-volume = 墳 %percentage%%
+label-muted = 婢 %percentage%%
+
+[module/battery]
+type = internal/battery
+full-at = 98
+battery=BAT1
+adapter=ADP1
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = #f53c3c
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = #ffa900
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+bar-capacity-width = 10
+bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
+bar-capacity-fill = █
+bar-capacity-fill-foreground = #ddffffff
+bar-capacity-fill-font = 3
+bar-capacity-empty = █
+bar-capacity-empty-font = 3
+bar-capacity-empty-foreground = #44ffffff
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+label = " %percentage%%"
+
+[module/network]
+type = internal/network
+interface = wlp2s0
+interval = 1
+accumulate-stats = true
+unknown-as-up = true
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected = " %downspeed:min:max%"
+label-disconnected = " %downspeed:min:max%"
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 1
+label-open = " Suchaimi"
+label-close = "Cancel"
+label-separator = |
+menu-0-0 = Restart
+menu-0-0-exec = menu-open-1
+menu-0-1 = Shutdown
+menu-0-1-exec = menu-open-2
+menu-1-0 = Cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = Restart
+menu-1-1-exec = sudo reboot
+menu-2-0 = Shutdown
+menu-2-0-exec = sudo poweroff
+menu-2-1 = Cancel
+menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+

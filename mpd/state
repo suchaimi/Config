@@ -1,0 +1,127 @@
+sw_volume: 100
+audio_device_state:1:alsa for audio soundcard
+audio_device_state:1:toggle_visualizer
+state: stop
+current: 77
+random: 0
+repeat: 1
+single: 1
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Armada/Armada - Harusnya Aku.mp3
+1:Armada/Armada - Apa Kabar Sayang.mp3
+2:Camila Cabello/Machine Gun Kelly, Camila Cabello - Bad Things-QpbQ4I3Eidg.mp3
+3:Camila Cabello/Camila Cabello - Never Be the Same-Ph54wQG8ynk.mp3
+4:Mix/Edward Maya & Vika Jigulina - Stereo Love (Jay Latune Remix)-Dnd5o1NwkLo.mp3
+5:Ari Lasso - Kulihat Kudengar Kurasa/Aku_Harus_Pergi_83.mp3
+6:Ari Lasso - Kulihat Kudengar Kurasa/Arti_Cinta_87.mp3
+7:Ari Lasso - Kulihat Kudengar Kurasa/Hancur_93.mp3
+8:Ari Lasso - Kulihat Kudengar Kurasa/Keajaiban_Cinta_26.mp3
+9:Ari Lasso - Kulihat Kudengar Kurasa/Kedamaian_Hati_11.mp3
+10:Ari Lasso - Kulihat Kudengar Kurasa/Mengejar_Matahari_38.mp3
+11:TDCC - Tourist History/1-08 What You Know.m4a
+12:TDCC - Tourist History/1-02 Come Back Home.m4a
+13:TDCC - Tourist History/1-01 Cigarettes In the Theatre.m4a
+14:TDCC - Tourist History/1-02 Come Back Home.m4a
+15:TDCC - Tourist History/1-03 Do You Want It All_.m4a
+16:TDCC - Tourist History/1-04 This Is the Life.m4a
+17:TDCC - Tourist History/1-05 Something Good Can Work.m4a
+18:TDCC - Tourist History/1-06 I Can Talk.m4a
+19:TDCC - Tourist History/1-07 Undercover Martyn.m4a
+20:TDCC - Tourist History/1-08 What You Know.m4a
+21:TDCC - Tourist History/1-09 Eat That Up, It's Good for You.m4a
+22:TDCC - Tourist History/1-10 You Are Not Stubborn.m4a
+23:TDCC - Tourist History/2-01 Kids.m4a
+24:TDCC - Tourist History/2-02 Undercover Martyn (Whatever_Wha.m4a
+25:TDCC - Tourist History/2-03 I Can Talk (French Horn Rebelli.m4a
+26:TDCC - Tourist History/2-06 I Can Talk (Moulinex Remix).m4a
+27:TDCC - Tourist History/2-07 What You Know (Cassian Remix).m4a
+28:TDCC - Tourist History/2-08 Come Back Home (Myd Remix).m4a
+29:TDCC - Tourist History/2-09 Something Good Can Work (Ted &.m4a
+30:TDCC - Tourist History/2-11 Something Good Can Work (The Tw.m4a
+31:Adele - 21 (Japan Edition)/01 Rolling In The Deep.m4a
+32:Adele - 21 (Japan Edition)/02 Rumour Has It.m4a
+33:Adele - 21 (Japan Edition)/03 Turning Tables.m4a
+34:Adele - 21 (Japan Edition)/04 Don_t You Remember.m4a
+35:Adele - 21 (Japan Edition)/05 Set Fire To The Rain.m4a
+36:Adele - 21 (Japan Edition)/06 He Won_t Go.m4a
+37:Adele - 21 (Japan Edition)/07 Take It All.m4a
+38:Adele - 21 (Japan Edition)/08 I_ll Be Waiting.m4a
+39:Adele - 21 (Japan Edition)/09 One And Only.m4a
+40:Adele - 21 (Japan Edition)/10 Lovesong.m4a
+41:Adele - 21 (Japan Edition)/11 Someone Like You.m4a
+42:Adele - 21 (Japan Edition)/12 I Found A Boy (Bonus Track).m4a
+43:Adele - 21 (Japan Edition)/13 Turning Tables (Live Acoustic).m4a
+44:Adele - 21 (Japan Edition)/14 Don't You Remember (Live Acoustic.m4a
+45:Adele - 21 (Japan Edition)/15 Someone Like You (Live Acoustic).m4a
+46:Ari Lasso - Sendiri Dulu/01 Percuma.MP3
+47:Ari Lasso - Sendiri Dulu/02 Selamat Jalan Mama.MP3
+48:Ari Lasso - Sendiri Dulu/03 Ampunilah.MP3
+49:Ari Lasso - Sendiri Dulu/04 Misteri Illahi.mp3
+50:Ari Lasso - Sendiri Dulu/05 Nelangsa.MP3
+51:Ari Lasso - Sendiri Dulu/06 Relakan Aku Pergi.MP3
+52:Ari Lasso - Sendiri Dulu/07 Penjaga Hati.MP3
+53:Ari Lasso - Sendiri Dulu/08 Jika.MP3
+54:Ari Lasso - Sendiri Dulu/09 Perbedaan.MP3
+55:M.I.A - AIM/01 Borders.m4a
+56:The Pretty Reckless - Light Me Up/01 My Medicine (Single Version).m4a
+57:The Pretty Reckless - Light Me Up/04 Light Me Up.m4a
+58:M.I.A - AIM/02 Go Off.m4a
+59:M.I.A - AIM/03 Bird Song (Blaqstarr Remix).m4a
+60:M.I.A - AIM/05 Freedun (feat. ZAYN).m4a
+61:The Pretty Reckless - Light Me Up/01 My Medicine (Single Version).m4a
+62:The Pretty Reckless - Light Me Up/02 Since You're Gone.m4a
+63:The Pretty Reckless - Light Me Up/03 Make Me Wanna Die.m4a
+64:The Pretty Reckless - Light Me Up/04 Light Me Up.m4a
+65:The Pretty Reckless - Light Me Up/10 You.m4a
+66:The Pretty Reckless - Light Me Up/11 Far from Never (Demo).m4a
+67:The Pretty Reckless - Light Me Up/12 Everybody Wants Something from Me.m4a
+68:Sia - Perfect - EP/03 Beautiful.m4a
+69:M.I.A - AIM/06 Foreign Friend (feat. Dexta Daps).m4a
+70:M.I.A - AIM/07 Finally.m4a
+71:Sia - Perfect - EP/05 Gentleman (Demo).m4a
+72:Sia - Perfect - EP/04 Awake Tonight.m4a
+73:Sia - Perfect - EP/02 Out There (feat. Hans Zimmer) .m4a
+74:Sia - Perfect - EP/01 Perfect.m4a
+75:Queen/Marc Martel - Bohemian Rhapsody (Queen cover).mp3
+76:Queen/Marc Martel - Love of My Life (Queen Cover).mp3
+77:Other/Naif Full Concert _ BukaMusik-wJ-Br1nVVG4.mp3
+78:Other/Creed - One Last Breath (Official Video)-qnkuBUAwfe0.mp3
+79:Queen/Marc Martel - Don't Stop Me Now (Official Music Video).mp3
+80:Queen/Marc Martel - We Are The Champions (Queen cover).mp3
+81:Other/Scorpions, Bon Jovi, The Eagles, Aerosmith, U2, Led Zeppelin - Now That's What I Call Power Ballads-BiWJdDSbsms.mp3
+82:Other/padi_reborn.mp3
+83:Other/hivi.mp3
+84:Other/Top Hits 2020 - New Pop Songs Playlist 2020 - ( Best Hits Music Playlist on Spotify )-ChXP97VTOjQ.mp3
+85:Other/The Cranberries Best Songs Full Album - The Cranberries Playlist-8DF3_Qx20Fo.mp3
+86:Other/the-fab-four.mp3
+87:Other/Always - Bon Jovi at Balai Sudirman Cover By Deo Entertainment semi orchestra.mp3
+88:Other/[Laguaz.work] peterpan - walau habis terang (best quality).mp3
+89:Other/Sheila On 7 - Buat Aku Tersenyum ( Lirik ).mp3
+90:Other/LinKin Park Top Songs - Best Songs Of Linkin Park-LhIJqQItaAg.mp3
+91:The Pretty Reckless - Light Me Up/05 Just Tonight.m4a
+92:DEAMN/DEAMN - Dangerous (Audio).mp3
+93:DEAMN/DEAMN - Dreaming (Audio).mp3
+94:DEAMN/DEAMN - Drive My Car (Audio).mp3
+95:DEAMN/DEAMN - Ecstasy (Audio).mp3
+96:DEAMN/DEAMN - Give Me Your Love (Audio).mp3
+97:DEAMN/DEAMN - Hypnotized (Audio).mp3
+98:DEAMN/Deamn - Jump (Original Mix).mp3
+99:DEAMN/DEAMN - Ocean (Audio).mp3
+100:DEAMN/DEAMN - Rendezvous (Audio).mp3
+101:DEAMN/DEAMN - Save Me (Audio).mp3
+102:DEAMN/DEAMN - Sign (Lyric).mp3
+103:DEAMN/DEAMN - Summer Love (Audio).mp3
+104:DEAMN/DEAMN - What Are You Waiting For (Audio).mp3
+105:DEAMN/DEAMN - Without You (Audio).mp3
+106:The Pretty Reckless - Light Me Up/08 Nothing Left to Lose.m4a
+107:Other/Best Classic Country Love Songs Of All Time - Top 100 Greatest Romantic Country Songs Ever-al0jk6MefSw.mp3
+108:Other/Chill Mix 2019 _ Happy Vibes-VopyGpEhlQ0.mp3
+109:Other/Chill Out Music Mix 🌷 Best Chill Trap, Indie, Deep House ♫-rj73lCWeZQw.mp3
+110:Other/Top 20 Most Popular Songs by NCS _ Best of NCS _ Most Viewed Songs--ObdvMkCKws.mp3
+111:Other/Wake Up Happy ☀️🥣 - An Indie_Pop_Folk “Good Morning” Playlist-TMb0Q7O6nN4.mp3
+112:Other/Country Songs 2019 🎈 Best Country Songs 2019 🎈 Country Music Playlist 2019-Yi6YBJBiO8U.mp3
+playlist_end
