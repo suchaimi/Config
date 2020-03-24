@@ -1,6 +1,7 @@
 "*****************************************************************************
 "" Vim plug core
 "*****************************************************************************
+
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
 if !filereadable(vimplug_exists)
@@ -8,24 +9,23 @@ if !filereadable(vimplug_exists)
     echoerr "You have to install curl or first install vim-plug yourself!"
     execute "q!"
   endif
-  echo "Installing Vim-Plug..."
-  echo ""
+  echo "Installing vim plug"
   silent exec "!\curl -fLo " . vimplug_exists . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
   let g:not_finish_vimplug = "yes"
   autocmd VimEnter * PlugInstall
 endif
 
-" Required:
-call plug#begin(expand('~/.config/nvim/plugged'))
-
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+
+call plug#begin(expand('~/.config/nvim/plugged'))
+
 Plug 'lervag/vimtex'
 Plug 'cespare/vim-toml'
 Plug 'tpope/vim-rhubarb'
+Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
-Plug 'Shougo/vimfiler.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'dylanaraps/wal.vim'
 Plug 'kien/ctrlp.vim'
@@ -84,17 +84,15 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'posva/vim-vue'
 Plug 'leafOfTree/vim-vue-plugin'
 
-"*****************************************************************************
-"*****************************************************************************
-
 call plug#end()
-
-" required:
-filetype plugin indent on
 
 "*****************************************************************************
 "" Basic Setup
-"*****************************************************************************"
+"*****************************************************************************
+
+" required
+filetype plugin indent on
+
 " encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -112,16 +110,17 @@ set splitbelow
 set undodir=~/.vimdid
 set undofile
 
-" autowriteall
+" auto read write
+set autoread
 set autowriteall
 
 " fix backspace indent
 set backspace=indent,eol,start
 
-" tabs. may be overridden by autocmd rules
-set softtabstop=2
-set tabstop=2
-set shiftwidth=2
+" tabs may be overridden by autocmd rules
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 " map leader to comma
@@ -137,7 +136,7 @@ set ignorecase
 set smartcase
 set fileformats=unix,dos,mac
 
-" Decent wildmenu
+" decent wildmenu
 set wildmenu
 set wildmode=list:longest
 set wildignore=.hg,.svn,*~,*.png,*.jpg,*.gif,*.settings,Thumbs.db,*.min.js,*.swp,publish/*,intermediate/*,*/node_modules/*,*/target/*,*.o,*.hi,Zend,vendor
@@ -159,50 +158,11 @@ set ruler
 set number
 set linebreak
 set noshowmode
-set scrolloff=3
 set relativenumber
-set mouse=a
 set mousemodel=popup
 set guioptions=egmrti
 set background=dark
-set updatetime=100
-let no_buffers_menu=1
-set laststatus=1
 colorscheme wal
-
-hi SignColumn ctermbg=Black
-hi CursorLine cterm=bold ctermbg=Blue
-
-" coc
-inoremap <silent><expr> <c-space> coc#refresh()
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-				\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-inoremap <silent><expr> <TAB>
-  \ pumvisible() ? coc#_select_confirm() :
-  \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ coc#refresh()
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-hi CocInfoSign  ctermfg=White guifg=White
-hi CocHintSign  ctermfg=White guifg=White
-hi CocErrorSign  ctermfg=White guifg=White
-hi CocWarningSign  ctermfg=White guifg=White
-
-" search will center on the line it's found in.
-nnoremap n nzzzv
-nnoremap N Nzzzv
-
-" nerdtree configuration
-let g:NERDTreeMinimalMenu=1
-let g:NERDTreeChDirMode=1
-let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', 'node_modules$']
-let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
-nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 "*****************************************************************************
 "" Autocmd Rules
@@ -221,11 +181,23 @@ augroup vimrc-make-cmake
   autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
 augroup END
 
-set autoread
-
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
+
+" move by line
+nnoremap j gj
+nnoremap k gk
+
+" f1 as esc
+imap <F1> <Esc>
+
+" ctrl-j as esc
+inoremap <C-j> <Esc>
+vnoremap <C-j> <Esc>
+
+" quick save
+nmap <leader>w :w<CR>
 
 " abbreviation
 cnoreabbrev W! w!
@@ -254,8 +226,8 @@ map H ^
 map L $
 
 " split
-noremap <Leader>h :<C-u>split<CR>
-noremap <Leader>v :<C-u>vsplit<CR>
+noremap <leader>h :<C-u>split<CR>
+noremap <leader>v :<C-u>vsplit<CR>
 
 " session management
 nnoremap <leader>so :OpenSession<Space>
@@ -278,13 +250,16 @@ noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
 
 " buffer nav
+noremap <space><space> <c-^>
 noremap <leader>z :bp<CR>
-noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
-noremap <leader>w :bn<CR>
 
 " close buffer
 noremap <leader>c :bd<CR>
+
+" search will center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 " clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
@@ -314,19 +289,6 @@ autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
 " go
 let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_space_tab_error = 0
-let g:go_highlight_array_whitespace_error = 0
-let g:go_highlight_trailing_whitespace_error = 0
-let g:go_highlight_extra_types = 1
 
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
@@ -357,7 +319,6 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
 
 " ruby
@@ -371,7 +332,7 @@ augroup vimrc-ruby
   autocmd FileType ruby set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
 augroup END
 
-" rspec.vim mappings
+" rspec mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
@@ -409,6 +370,18 @@ let g:rustfmt_autosave = 1
 let g:yats_host_keyword = 1
 
 " vuejs
-let g:vue_disable_pre_processors=1
+let g:vue_disable_pre_processors = 1
 let g:vim_vue_plugin_load_full_syntax = 1
 
+" coc
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+	\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" ctrlp
+let g:ctrlp_open_new_file = 'r'
+
+" nerdtree 
+let g:NERDTreeMinimalMenu = 1
+let g:NERDTreeChDirMode = 1
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
