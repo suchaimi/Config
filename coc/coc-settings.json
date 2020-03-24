@@ -1,9 +1,12 @@
 {
+  "list.autoResize": false,
+  "diagnostic.enableSign": false,
   "diagnostic.hintSign": "> ",
   "diagnostic.infoSign": "> ",
   "diagnostic.errorSign": "> ",
   "diagnostic.warningSign": "> ",
   "suggest.noselect": false,
+  "suggest.floatEnable": false,
   "suggest.disableKind": true,
   "suggest.disableMenu": true,
   "suggest.disableMenuShortcut": true,
@@ -11,5 +14,6 @@
   "suggest.maxPreviewWidth": 50,
   "suggest.detailMaxLength": 50,
   "suggest.maxCompleteItemCount": 15,
-  "coc.preferences.formatOnType": true
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.messageLevel": "error"
 }
